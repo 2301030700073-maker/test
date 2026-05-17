@@ -7,4 +7,3 @@ COPY index.html /var/www/html/index.html
 EXPOSE 80
 
 CMD ["apachectl", "-D", "FOREGROUND"]
-ubuntu@ip-172-31-34-129:~$
