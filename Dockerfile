@@ -1,5 +1,9 @@
-FROM hshar/webapp
+FROM ubuntu:22.04
 
-RUN rm /var/www/html/index.html
+RUN apt update && apt install apache2 -y
 
-ADD ./index.html /var/www/html
+COPY index.html /var/www/html/index.html
+
+EXPOSE 80
+
+CMD ["apachectl", "-D", "FOREGROUND"]
